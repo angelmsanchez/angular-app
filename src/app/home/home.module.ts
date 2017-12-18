@@ -7,6 +7,11 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     CommonModule
   ],
-  declarations: [HomeComponent]
+  declarations: [
+    HomeComponent
+  ],
+  exports: [
+    HomeComponent
+  ]
 })
 export class HomeModule { }

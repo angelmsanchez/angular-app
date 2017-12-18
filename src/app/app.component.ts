@@ -12,8 +12,9 @@ export class AppComponent {
   constructor(private router: Router) {
   }
 
-  goTo(): void {
-    console.log('goto');
-    this.router.navigate(['/home']);
+  goTo(route: string): void {
+    console.log('goto ' + route);
+    this.router.navigate([route]);
+//    this.router.navigate([route]);
   }
 }
