@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-angular',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -15,6 +15,5 @@ export class AppComponent {
   goTo(route: string): void {
     console.log('goto ' + route);
     this.router.navigate([route]);
-//    this.router.navigate([route]);
   }
 }
