@@ -2,33 +2,13 @@ import { Route, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import {
-  HomeComponent, AmountRequestComponent,
-  TimeDurationComponent, DetailComponent
+  HomeComponent
 } from './components';
-import { ProcessCanActivate } from './services/process.can-activate';
 
 export const routes: Route[] = [
   {
     path: '',
     component: HomeComponent,
-  },
-  {
-    path: 'amount-request',
-    component: AmountRequestComponent
-  },
-  {
-    path: 'time-duration',
-    component: TimeDurationComponent,
-    canActivate: [
-      ProcessCanActivate
-    ]
-  },
-  {
-    path: 'detail',
-    component: DetailComponent,
-    canActivate: [
-      ProcessCanActivate
-    ]
   }
 ];
 
@@ -38,9 +18,6 @@ export const routes: Route[] = [
   ],
   exports: [
     RouterModule
-  ],
-  providers: [
-    ProcessCanActivate
   ]
 })
 export class HomeRoutingModule { }

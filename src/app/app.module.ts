@@ -2,10 +2,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { routes } from './app-routing.module';
+import { CoreModule } from './core/core.module';
+
 
 @NgModule({
   imports: [
@@ -13,7 +15,8 @@ import { routes } from './app-routing.module';
     RouterModule.forRoot(routes,
       { preloadingStrategy: PreloadAllModules }
     ),
-    MatTabsModule
+    MatTabsModule,
+    CoreModule
   ],
   declarations: [
     AppComponent,
