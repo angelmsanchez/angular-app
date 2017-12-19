@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import * as moment from 'moment';
+import { Constants } from './../../../shared/constants';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,7 @@ import * as moment from 'moment';
 })
 
 export class HeaderComponent implements OnInit {
-  // urlImg: string = Constants.URL_IMG + 'bme-logo.png';
+  urlImg: string = Constants.URL_IMG + 'general/';
 
   constructor(private router: Router) {
   }
@@ -20,6 +20,6 @@ export class HeaderComponent implements OnInit {
   }
 
   goToHome(): void {
-    // this.router.navigate([routeToNavigate]);
+    this.router.navigate(['/home']);
   }
 }
