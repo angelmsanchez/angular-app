@@ -1,0 +1,6 @@
+#app-map {
+  height: 800px;
+  background-image: url("./../../../assets/img/general/mapa-mundi.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 800px;
+}
