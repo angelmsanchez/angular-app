@@ -1,0 +1,8 @@
+@import '~sass/_variables';
+#app-angular {
+  .routes {
+    width: 100%;
+    background: $blue-background;
+    min-height: calc(100vh - 80px);
+  }
+}

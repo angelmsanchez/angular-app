@@ -1,0 +1,19 @@
+@import '~sass/_variables';
+#app-header {
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  .logo {
+    cursor: pointer;
+    margin-left: 25px;
+  }
+  .logo img {
+    width: 215px;
+  }
+  .cactus img {
+    width: 75px;
+  }
+}
