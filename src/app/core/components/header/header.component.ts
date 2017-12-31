@@ -9,14 +9,10 @@ import { Constants } from './../../../shared/constants';
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   urlImg: string = Constants.URL_IMG + 'general/';
 
   constructor(private router: Router) {
-  }
-
-  ngOnInit(): void {
-    console.log('ngOnInit');
   }
 
   goToHome(): void {

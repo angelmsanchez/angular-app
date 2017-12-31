@@ -15,5 +15,9 @@ export const routes: Routes = [
   {
     path: 'map',
     loadChildren: './map/map.module#MapModule',
+  },
+  {
+    path: 'bite',
+    loadChildren: './bite/bite.module#BiteModule',
   }
 ];

@@ -1,6 +1,26 @@
 <section id="app-login">
-  LOGIN COMPONENT
-  <button (click)="goTo()">
-    go to home
-  </button>
+  <div class="body">
+    <form #loginForm="ngForm" (ngSubmit)="login()" novalidate>
+      <!--USERNAME-->
+      <div class="form-group">
+        <div class="icon-container">
+          <div class="icon username-icon"></div>
+        </div>
+        <input type="text" class="form-control" id="user" [(ngModel)]="user.user" name="user" maxlength="50"
+          required/>
+      </div>
+      <!--PASSWORD-->
+      <div class="form-group">
+        <div class="icon-container">
+          <div class="icon password-icon"></div>
+        </div>
+        <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password"
+          required/>
+      </div>
+      <!--BUTTONS-->
+      <div class="buttons-container">
+        <button type="submit" class="btn confirm">Aceptar</button>
+      </div>
+    </form>
+  </div>
 </section>
