@@ -1,8 +1,13 @@
 <section id="app-header">
+  <!-- LOGO  -->
   <div class="logo" (click)="goToHome()">
     <img src="{{ urlImg + 'nightmares.png'}}" />
+    <div class="cactus" (click)="goToHome()">
+      <img src="{{ urlImg + 'cactus-gif.gif' }}" />
+    </div>
   </div>
-  <div class="cactus" (click)="goToHome()">
-    <img src="{{ urlImg + 'cactus-gif.gif' }}" />
+  <!-- USER LOGOUT -->
+  <div class="pingui" (click)="logout()">
+    <img src="{{ urlImg + 'pinguino.png' }}" />
   </div>
 </section>

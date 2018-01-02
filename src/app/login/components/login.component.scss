@@ -11,33 +11,33 @@
   justify-content: center;
   @media (min-width: $screen-md) {
     margin-top: -15px;
-    margin-left: -25px;
   }
-    .body {
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    @media (min-width: $screen-xs) {
+      width: 338px;
+      height: 368px;
+    }
+    form {
+      width: 210px;
+      height: 244px;
+      >div {
+        margin-bottom: 20px;
+      }
+      .form-group {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        background-color: $white;
-        @media (min-width: $screen-xs) {
-          width: 338px;
-          height: 368px;
-        }
-      form {
-        width: 210px;
-        height: 244px;
-        .form-group {
-          display: flex;
-        }
         .icon-container {
           display: flex;
           justify-content: center;
           align-items: center;
           width: 30px;
-          height: 30px;
-          background-color: $blue-dark;
+          height: 30px; // background-color: $blue-dark;
         }
         .form-control {
           border-radius: 0 2px 2px 0;
@@ -46,22 +46,23 @@
           vertical-align: middle;
           &:focus,
           &.ng-valid {
-            border-left: 0;
             text-indent: .7px;
           }
         }
-        .buttons-container {
-          display: flex;
-          justify-content: center;
-          align-items: flex-end;
-          button {
-            width: 100px;
-            border-radius: 2px;
-            font-size: 11px;
-            color: $white;
-            height: 30px;
-          }
+      }
+      .buttons-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        button {
+          width: 100px;
+          border-radius: 2px;
+          font-size: 11px;
+          color: $white;
+          height: 30px;
+          background-color: $blue-dark;
         }
       }
     }
+  }
 }

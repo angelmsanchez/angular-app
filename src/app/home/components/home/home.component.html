@@ -1,9 +1,15 @@
-<section class="home">
-  <div>
+<section id="home">
+  <div class="tabs">
     <mat-tab-group class="demo-tab-group">
-      <mat-tab label="1985~1993">
+      <mat-tab class="tab-year" label="1985~1993">
         <div class="demo-tab-content">
           POQUITO A POQUITO....
+          <button (click)="isImg = !isImg">
+            PULSA MI AMOR...
+          </button>
+          <div *ngIf="isImg">
+            <img width="300" alt="Angular Logo" src="./../assets/img/general/corazon.gif">
+          </div>
         </div>
       </mat-tab>
       <mat-tab label="2017">
@@ -28,14 +34,8 @@
         </div>
       </mat-tab>
       <mat-tab label="Otras">
-        No content. Sorry for the trouble
+        <img width="500" alt="Angular Logo" src="./../assets/img/general/frida.jpg">
       </mat-tab>
     </mat-tab-group>
-  </div>
-  <button (click)="isImg = !isImg">
-    PULSA MI AMOR...
-  </button>
-  <div *ngIf="isImg">
-    <img width="300" alt="Angular Logo" src="./../assets/img/general/corazon.gif">
   </div>
 </section>
