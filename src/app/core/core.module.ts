@@ -3,6 +3,8 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { HeaderComponent, MenuComponent } from './components';
+import { CoreService, AuthService } from './services';
+import { AuthCanActivate } from './guards';
 
 @NgModule({
   imports: [
@@ -16,6 +18,11 @@ import { HeaderComponent, MenuComponent } from './components';
   exports: [
     MenuComponent,
     HeaderComponent,
+  ],
+  providers: [
+    CoreService,
+    AuthService,
+    AuthCanActivate
   ]
 })
 

@@ -1,0 +1,11 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "files.exclude": {
+    "**/.git": false
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "window.zoomLevel": 0,
+  "vsicons.presets.angular": true,
+  "htmlhint.enable": true
+}

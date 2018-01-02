@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { UserInterface } from './../interfaces/user.interface';
 import { LoginService } from './../services/login.service';
+import { CoreService } from './../../core/services/core.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   user: UserInterface;
 
   constructor(private router: Router,
-    private loginService: LoginService) {
+    private loginService: LoginService,
+    private coreService: CoreService) {
   }
 
   ngOnInit(): void {
@@ -23,9 +25,10 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     if (this.loginService.login(this.user)) {
+      this.coreService.setLogin(true);
       this.router.navigate(['/home']);
     } else {
-      console.log('colilla');
+      console.log('Error password');
     }
   }
 

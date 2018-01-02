@@ -1,6 +1,6 @@
 <section id="app-angular">
-  <app-header></app-header>
-  <app-menu></app-menu>
+  <app-header *ngIf="isLogin"></app-header>
+  <app-menu *ngIf="isLogin"></app-menu>
   <div class="routes">
     <router-outlet></router-outlet>
   </div>

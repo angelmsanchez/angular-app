@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { routes } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 
-
 @NgModule({
   imports: [
     NoopAnimationsModule,
