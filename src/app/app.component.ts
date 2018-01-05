@@ -8,7 +8,7 @@ import { CoreService } from './core/services/core.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  private isLogin: boolean;
+  isLogin: boolean;
   constructor(private coreService: CoreService) {
   }
 
