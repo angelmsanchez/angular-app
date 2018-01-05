@@ -1,7 +1,7 @@
 <section id="app-angular">
-  <app-header *ngIf="isLogin"></app-header>
-  <app-menu *ngIf="isLogin"></app-menu>
+  <app-header *ngIf="enabledMenuHeader | async"></app-header>
   <div class="routes">
     <router-outlet></router-outlet>
   </div>
+  <app-menu *ngIf="enabledMenuHeader | async"></app-menu>
 </section>

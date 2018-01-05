@@ -13,11 +13,9 @@ export class CoreService {
 
   setLogin(changeLogin: boolean): void {
     this.isLogin = changeLogin;
-    console.log('coreService set ' + this.isLogin);
   }
 
   getLogin(): Observable<boolean> {
-    console.log('coreService ' + this.isLogin);
     return Observable.of(this.isLogin);
   }
 }

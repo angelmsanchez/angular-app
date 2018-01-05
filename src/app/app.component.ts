@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
-import { CoreService } from './core/services/core.service';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+
+import * as fromRoot from './store-state/reducers';
+import { MenuHeaderAction } from './store-state/actions';
 
 @Component({
   selector: 'app-angular',
@@ -8,20 +13,26 @@ import { CoreService } from './core/services/core.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  isLogin: boolean;
-  constructor(private coreService: CoreService) {
+  enabledMenuHeader: Observable<any>;
+
+  private menuHeaderAction: MenuHeaderAction = new MenuHeaderAction();
+
+  constructor(
+    private store: Store<fromRoot.State>,
+    private location: Location) {
   }
 
   ngOnInit(): void {
-    this.initCoreService();
+    this.configMenu();
+    this.enabledMenuHeader = this.store.select('enabledMenuHeader');
   }
 
-  private initCoreService(): void {
-    this.coreService
-      .getLogin()
-      .subscribe(isLogin => {
-        console.log('subscribe ' + isLogin);
-        this.isLogin = isLogin;
-      });
+
+  private configMenu(): void {
+    if (this.location.path() === '/login') {
+      this.store.dispatch(this.menuHeaderAction.deactiveMenuHeader());
+    } else {
+      this.store.dispatch(this.menuHeaderAction.activeMenuHeader());
+    }
   }
 }

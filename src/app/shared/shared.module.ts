@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { RouterComponent } from './components/router/router.component';
-
+import { RouterComponent, TabsComponent } from './components';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    RouterComponent
+    RouterComponent,
+    TabsComponent,
   ],
   exports: [
-    RouterComponent
+    RouterComponent,
+    TabsComponent,
   ]
 })
 

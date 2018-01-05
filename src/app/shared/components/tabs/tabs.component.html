@@ -1,0 +1,6 @@
+<section id="app-tabs">
+  <div class="tab" (click)="tabClicked(tab, tabIndex)" *ngFor="let tab of tabs; let tabIndex = index" [ngClass]="{'active': tab.isActive, 'no-pointer': tabs.length === 1}">
+    <span class="tab-name" [innerHTML]="tab.title"></span>
+    <div class="border"></div>
+  </div>
+</section>

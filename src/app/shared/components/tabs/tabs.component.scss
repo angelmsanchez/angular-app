@@ -1,0 +1,38 @@
+@import '~sass/_variables';
+#app-tabs {
+  background: $gray-lightest;
+  display: flex;
+  min-height: 40px;
+  .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 30px;
+    min-height: 40px;
+    &:hover {
+      cursor: pointer;
+    }
+    &.no-pointer {
+      cursor: default;
+    }
+  }
+  .tab-name {
+    padding-top: 10px;
+    color: $gray;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 11px;
+  }
+  .tab.active {
+    background: $white;
+    .tab-name {
+      color: $gray-dark;
+    }
+    .border {
+      width: 100%;
+      border-bottom: 3px solid $blue-dark;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { AuthCanActivate } from './core/guards';
+import { LoginCanActivate } from './login/guards/login.can-activate';
 
 export const routes: Routes = [
   {
@@ -14,6 +15,7 @@ export const routes: Routes = [
   {
     path: 'login',
     loadChildren: './login/login.module#LoginModule',
+    canActivate: [LoginCanActivate]
   },
   {
     path: 'map',

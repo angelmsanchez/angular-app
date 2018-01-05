@@ -1,41 +1,32 @@
 <section id="home">
   <div class="tabs">
-    <mat-tab-group class="demo-tab-group">
-      <mat-tab class="tab-year" label="1985~1993">
-        <div class="demo-tab-content">
-          POQUITO A POQUITO....
-          <button (click)="isImg = !isImg">
-            PULSA MI AMOR...
-          </button>
-          <div *ngIf="isImg">
-            <img width="300" alt="Angular Logo" src="./../assets/img/general/corazon.gif">
-          </div>
-        </div>
-      </mat-tab>
-      <mat-tab label="2017">
-        <div class="demo-tab-content">
-          <h1>
-            ERES LO MEJOR DE MI VIDA PESADILLA
-          </h1>
-          <img width="300" alt="Angular Logo" src="./../assets/img/2017/asturias/IMG_6273.jpg">
-        </div>
-      </mat-tab>
-      <mat-tab label="2018">
-        <div class="demo-tab-content">
-          Belgica.... Cuba.....
-        </div>
-      </mat-tab>
-      <mat-tab label="estrellita">
-        <ng-template mat-tab-label>
-          ⭐
-        </ng-template>
-        <div class="demo-tab-content">
-          No es la estrellita de los 8000 pero pueden ser nuestras fotos favoritas (para mi son todas) :)
-        </div>
-      </mat-tab>
-      <mat-tab label="Otras">
-        <img width="500" alt="Angular Logo" src="./../assets/img/general/frida.jpg">
-      </mat-tab>
-    </mat-tab-group>
+    <app-tabs [tabs]="tabs" (onTabChanged)="changeTab($event)"></app-tabs>
+    <!-- 1985~1993 -->
+    <div class="tab-content" *ngIf="tabActive === '1985~1993'">
+      POQUITO A POQUITO....
+      <button (click)="isImg = !isImg">
+        PULSA MI AMOR...
+      </button>
+      <div *ngIf="isImg">
+        <img width="300" alt="Angular Logo" src="./../assets/img/general/congratulation.jfif">
+        <img width="300" alt="Angular Logo" src="./../assets/img/general/corazon.gif">
+      </div>
+    </div>
+    <!-- 2017 -->
+    <div class="tab-content" *ngIf="tabActive === '2017'">
+      <h1>
+        ERES LO MEJOR DE MI VIDA PESADILLA
+      </h1>
+      <img width="300" alt="Angular Logo" src="./../assets/img/2017/asturias/IMG_6273.jpg">
+    </div>
+    <!-- 2018 -->
+    <div class="tab-content" *ngIf="tabActive === '2018'">
+      Belgica.... Cuba.....
+    </div>
+    <!-- OTRAS -->
+    <div class="tab-content" *ngIf="tabActive === 'otras'">
+      No es la estrellita de los 8000 pero pueden ser nuestras fotos favoritas (para mi son todas) :)
+      <img width="500" alt="Angular Logo" src="./../assets/img/general/frida.jpg">
+    </div>
   </div>
 </section>
