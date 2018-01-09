@@ -14,14 +14,17 @@
     </div>
     <!-- 2017 -->
     <div class="tab-content" *ngIf="tabActive === '2017'">
-      <h1>
-        ERES LO MEJOR DE MI VIDA PESADILLA
-      </h1>
-      <img width="300" alt="Angular Logo" src="./../assets/img/2017/asturias/IMG_6273.jpg">
+      <div class="places" *ngFor="let place of places">
+        <app-place [place]="place"></app-place>
+      </div>
     </div>
     <!-- 2018 -->
     <div class="tab-content" *ngIf="tabActive === '2018'">
       Belgica.... Cuba.....
+      <h1>
+        ERES LO MEJOR DE MI VIDA PESADILLA
+      </h1>
+      <img width="300" alt="Angular Logo" src="./../assets/img/2017/asturias/IMG_6273.jpg">
     </div>
     <!-- OTRAS -->
     <div class="tab-content" *ngIf="tabActive === 'otras'">

@@ -1,4 +1,10 @@
 @import '~sass/_variables';
 #home {
-
+  .tab-content {
+    display: flex;
+    flex-wrap: wrap;
+    .places {
+      padding: 10px;
+    }
+  }
 }

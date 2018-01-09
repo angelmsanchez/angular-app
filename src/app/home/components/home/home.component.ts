@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
+import { PlaceInterface } from './../../../shared/interfaces/place.interface';
+import { Constants } from './../../../shared/constants';
 
 @Component({
   selector: 'app-home',
@@ -11,21 +13,20 @@ export class HomeComponent implements OnInit {
   isImg: boolean;
   tabs: object[];
   tabActive = '1985~1993';
-  constructor(private router: Router) {
+  urlImg: string = Constants.URL_IMG;
+  places: PlaceInterface[];
+
+  constructor() {
   }
 
   ngOnInit(): void {
     this.initTabs();
+    this.initPlaces();
     this.isImg = false;
-  }
-
-  goToSteps(): void {
-    this.router.navigate(['home/amount-request']);
   }
 
   changeTab(event): void {
     this.tabActive = event.tab.service;
-    console.log('change.tab', event);
   }
 
   private initTabs(): void {
@@ -49,6 +50,19 @@ export class HomeComponent implements OnInit {
         title: 'Otras',
         service: 'otras',
         isActive: this.tabActive === 'otras'
+      }
+    ];
+  }
+
+  private initPlaces(): void {
+    this.places = [
+      {
+        title: 'biarritz',
+        img: this.urlImg + '2017/biarritz/biarritz.jpg'
+      },
+      {
+        title: 'oporto',
+        img: this.urlImg + '2017/oporto/oporto.jpg'
       }
     ];
   }

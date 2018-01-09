@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { RouterComponent, TabsComponent } from './components';
+import { RouterComponent, TabsComponent, PlaceComponent } from './components';
 
 @NgModule({
   imports: [
@@ -10,10 +10,12 @@ import { RouterComponent, TabsComponent } from './components';
   declarations: [
     RouterComponent,
     TabsComponent,
+    PlaceComponent,
   ],
   exports: [
     RouterComponent,
     TabsComponent,
+    PlaceComponent,
   ]
 })
 

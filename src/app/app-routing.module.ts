@@ -26,5 +26,10 @@ export const routes: Routes = [
     path: 'bite',
     loadChildren: './bite/bite.module#BiteModule',
     canActivate: [AuthCanActivate]
+  },
+  {
+    path: 'places',
+    loadChildren: './places/places.module#PlacesModule',
+    canActivate: [AuthCanActivate]
   }
 ];
