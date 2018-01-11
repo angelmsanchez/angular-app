@@ -2,13 +2,13 @@ import { Route, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import {
- OportoComponent
+ DetailComponent
 } from './components';
 
 export const routes: Route[] = [
   {
-    path: 'oporto',
-    component: OportoComponent,
+    path: ':id',
+    component: DetailComponent,
   }
 ];
 

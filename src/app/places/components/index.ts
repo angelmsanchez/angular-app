@@ -1,1 +1,1 @@
-export * from './oporto';
+export * from './detail';

@@ -17,12 +17,13 @@ export class PlaceComponent {
 
   getMyStyles(): object {
     return {
-      'background-image': 'url(' + this.place.img + ')'
+      'background-image': 'url(' + this.place.img + ')',
+      'background-size': '300px 150px'
     };
   }
 
   goTo(): void {
-    this.router.navigate(['/places/' + this.place.title]);
+    this.router.navigate(['/places/', this.place.title]);
   }
 
 }

@@ -4,11 +4,11 @@ import { PlaceInterface } from './../../../shared/interfaces/place.interface';
 import { Constants } from './../../../shared/constants';
 
 @Component({
-  selector: 'app-oporto',
-  templateUrl: './oporto.component.html',
+  selector: 'app-detail',
+  templateUrl: './detail.component.html',
 })
 
-export class OportoComponent implements OnInit {
+export class DetailComponent implements OnInit {
   isImg: boolean;
   tabs: object[];
   tabActive = '1985~1993';
