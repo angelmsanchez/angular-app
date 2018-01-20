@@ -1,0 +1,17 @@
+<section id="app-bite">
+    <h3>
+        <a target="_blank" href="https://docs.google.com/spreadsheets/d/1jiSFPDpDPmaGWryl4IH0pSI1Qw7wTT2GJAfLKLKScHU/edit?usp=sheets_home&ths=true">
+      Gastro Bar
+    </a>
+    </h3>
+    <div class="list-restaurant">
+        <div class="title">
+            LISTADO DE RESTAURANTES
+        </div>
+        <div class="filters">
+        </div>
+        <div class="restaurants">
+            <app-restaurant class="restaurant" *ngFor="let restaurant of restaurants" [restaurant]="restaurant"></app-restaurant>
+        </div>
+    </div>
+</section>

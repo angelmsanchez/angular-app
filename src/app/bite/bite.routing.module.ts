@@ -1,13 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
 
-import { BiteComponent } from './components/bite.component';
+import { BiteComponent } from './components';
 
 export const routes: Route[] = [
   {
     path: '',
-    component: BiteComponent
-  }
+    children: [
+      {
+        path: '',
+        component: BiteComponent
+      },
+      {
+        path: 'detail',
+        component: BiteComponent
+      }
+    ]
+  },
+
 ];
 
 @NgModule({

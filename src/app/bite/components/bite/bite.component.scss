@@ -1,0 +1,12 @@
+#app-bite {
+    padding: 10px;
+    .list-restaurant {
+        .restaurants {
+            display: flex;
+            flex-wrap: wrap;
+            .restaurant {
+                margin: 10px;
+            }
+        }
+    }
+}

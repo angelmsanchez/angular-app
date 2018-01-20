@@ -1,0 +1,8 @@
+<section id="app-restaurant" [ngClass]="restaurant.type">
+    <div class="title">
+        <span [innerHTML]="restaurant.title"></span>
+    </div>
+    <div class="rate">
+        <i class="material-icons md-light" *ngFor="let icon of restaurant.rateStars">stars</i>
+    </div>
+</section>
