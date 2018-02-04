@@ -1,3 +1,10 @@
-<section id="app-detail">
-  DETAIL
+<section id="place-detail">
+    <h3 [innerHTML]=" place | uppercase"></h3>
+    <video width="320" height="240" controls controlsList="nodownload">
+      <source src="{{urlVideo}}" type="video/mp4">
+    </video>
+
+    <div class="photos">
+        <!-- <img src="{{ urlImg }}"> -->
+    </div>
 </section>
