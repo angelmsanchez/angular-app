@@ -1,35 +1,37 @@
 <section id="home">
-  <div class="tabs">
-    <app-tabs [tabs]="tabs" (onTabChanged)="changeTab($event)"></app-tabs>
-    <!-- 1985~1993 -->
-    <div class="tab-content" *ngIf="tabActive === '1985~1993'">
-      POQUITO A POQUITO....
-      <button (click)="isImg = !isImg">
+    <div class="tabs">
+        <app-tabs [tabs]="tabs" (onTabChanged)="changeTab($event)"></app-tabs>
+        <!-- 1985~1993 -->
+        <div class="tab-content" *ngIf="tabActive === '1985~1993'">
+            Belgica.... Cuba.....
+            <h1>
+                ERES LO MEJOR DE MI VIDA PESADILLA
+            </h1>
+            <!-- <img width="300" alt="Angular Logo" src="./../assets/img/2017/asturias/IMG_6273.jpg"> -->
+            <button (click)="isImg = !isImg">
         PULSA MI AMOR...
       </button>
-      <div *ngIf="isImg">
-        <img width="300" alt="Angular Logo" src="./../assets/img/general/congratulation.jfif">
-        <img width="300" alt="Angular Logo" src="./../assets/img/general/corazon.gif">
-      </div>
+            <div *ngIf="isImg">
+                <img width="300" alt="Angular Logo" src="./../assets/img/general/congratulation.jfif">
+                <img width="300" alt="Angular Logo" src="./../assets/img/general/corazon.gif">
+            </div>
+        </div>
+        <!-- 2017 -->
+        <div class="tab-content" *ngIf="tabActive === '2017'">
+            <div class="places" *ngFor="let place of places2017">
+                <app-place [place]="place"></app-place>
+            </div>
+        </div>
+        <!-- 2018 -->
+        <div class="tab-content" *ngIf="tabActive === '2018'">
+            <div class="places" *ngFor="let place of places2018">
+                <app-place [place]="place"></app-place>
+            </div>
+        </div>
+        <!-- OTRAS -->
+        <div class="tab-content" *ngIf="tabActive === 'otras'">
+            No es la estrellita de los 8000 pero pueden ser nuestras fotos favoritas (para mi son todas) :)
+            <img width="500" alt="Angular Logo" src="./../assets/img/general/frida.jpg">
+        </div>
     </div>
-    <!-- 2017 -->
-    <div class="tab-content" *ngIf="tabActive === '2017'">
-      <div class="places" *ngFor="let place of places">
-        <app-place [place]="place"></app-place>
-      </div>
-    </div>
-    <!-- 2018 -->
-    <div class="tab-content" *ngIf="tabActive === '2018'">
-      Belgica.... Cuba.....
-      <h1>
-        ERES LO MEJOR DE MI VIDA PESADILLA
-      </h1>
-      <img width="300" alt="Angular Logo" src="./../assets/img/2017/asturias/IMG_6273.jpg">
-    </div>
-    <!-- OTRAS -->
-    <div class="tab-content" *ngIf="tabActive === 'otras'">
-      No es la estrellita de los 8000 pero pueden ser nuestras fotos favoritas (para mi son todas) :)
-      <img width="500" alt="Angular Logo" src="./../assets/img/general/frida.jpg">
-    </div>
-  </div>
 </section>

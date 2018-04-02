@@ -14,7 +14,8 @@ export class HomeComponent implements OnInit {
   tabs: object[];
   tabActive = '1985~1993';
   urlImg: string = Constants.URL_IMG;
-  places: PlaceInterface[];
+  places2017: PlaceInterface[];
+  places2018: PlaceInterface[];
 
   constructor() {
   }
@@ -55,14 +56,40 @@ export class HomeComponent implements OnInit {
   }
 
   private initPlaces(): void {
-    this.places = [
+    this.places2017 = [
       {
         title: 'biarritz',
         img: this.urlImg + '2017/biarritz/biarritz.jpg'
       },
       {
+        title: 'algarve',
+        img: this.urlImg + '2017/algarve/algarve.jpg'
+      },
+      {
         title: 'oporto',
         img: this.urlImg + '2017/oporto/oporto.jpg'
+      },
+      {
+        title: 'asturias',
+        img: this.urlImg + '2017/asturias/asturias.jpg'
+      },
+      {
+        title: 'haro',
+        img: this.urlImg + '2017/haro/haro.jpg'
+      },
+      {
+        title: 'otras',
+        img: this.urlImg + '2017/otras/otras.jpg'
+      }
+    ];
+    this.places2018 = [
+      {
+        title: 'belgica',
+        img: this.urlImg + '2017/belgica/belgica.jpg'
+      },
+      {
+        title: 'cuba',
+        img: this.urlImg + '2017/cuba/cuba.jpg'
       }
     ];
   }
