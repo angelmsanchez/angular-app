@@ -85,11 +85,11 @@ export class HomeComponent implements OnInit {
     this.places2018 = [
       {
         title: 'belgica',
-        img: this.urlImg + '2017/belgica/belgica.jpg'
+        img: this.urlImg + '2018/belgica/belgica.jpg'
       },
       {
         title: 'cuba',
-        img: this.urlImg + '2017/cuba/cuba.jpg'
+        img: this.urlImg + '2018/cuba/cuba.jpg'
       }
     ];
   }
